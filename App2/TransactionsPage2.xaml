@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:app2="clr-namespace:App2;assembly=App2"
+			 Disappearing="TransactionsPage_OnDisappearing"
+             x:Class="App2.TransactionsPage2">
+
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition/>
+		</Grid.RowDefinitions>
+
+		<Label Text="Click 'Scroll To' and go back" HorizontalOptions="Center"/>
+	
+		<Button Grid.Row="1" Text="Scroll to" Clicked="Button_OnClicked"/>
+
+		<app2:FastListView x:Name="transactionsListView" Grid.Row="2" ItemsSource="{Binding Items, Mode=OneWay}" HasUnevenRows="True">
+			<app2:FastListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<ViewCell.ContextActions>
+							<!-- Note no binding for MenuItem -->
+							<MenuItem Clicked="MenuItem_OnClicked" Text="Test" />
+						</ViewCell.ContextActions>
+
+						<Label Text="{Binding Name}"/>
+					</ViewCell>
+				</DataTemplate>
+			</app2:FastListView.ItemTemplate>
+		</app2:FastListView>
+	</Grid>
+
+</ContentPage>
