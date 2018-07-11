@@ -9,6 +9,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\ClassLibrary1.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="TransactionsPage2.xaml.cs">
       <DependentUpon>TransactionsPage2.xaml</DependentUpon>
     </Compile>

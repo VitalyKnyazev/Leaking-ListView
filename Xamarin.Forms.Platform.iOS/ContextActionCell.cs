@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Threading;
-using App2;
+using ClassLibrary1;
 using Foundation;
 using UIKit;
 using Xamarin.Forms.Platform.iOS.Resources;

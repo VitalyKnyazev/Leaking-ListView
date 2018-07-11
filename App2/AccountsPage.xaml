@@ -5,11 +5,12 @@
              Appearing="AccountsPage_OnAppearing">
 
 	<StackLayout>
-		<Button Text="Transactions (leaks and crash)" Clicked="TransactionsLeaked_OnClicked"/>
+		<Button Text="Transactions (leaks and crash in ContextActionsCell.SetupSelection)" Clicked="TransactionsLeaked_OnClicked"/>
 		<Button Text="Transactions (leaks, but no crash)" Clicked="TransactionsNormal_OnClicked"/>
 		<Button Text="Force GC" Clicked="Button_OnClicked1"/>
 		
 		<Label x:Name="leakedMenuItemSubscriptionCountLabel" HorizontalOptions="Center"/>
+		<Label x:Name="leakedMenuItemCountLabel" HorizontalOptions="Center"/>
 	</StackLayout>
 
 </ContentPage>

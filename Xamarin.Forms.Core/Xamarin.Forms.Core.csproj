@@ -7,6 +7,7 @@
 		<DebugType>full</DebugType>
 	</PropertyGroup>
 	<ItemGroup>
+		<ProjectReference Include="..\ClassLibrary1\ClassLibrary1.csproj" />
 		<ProjectReference Include="..\Xamarin.Forms.Platform\Xamarin.Forms.Platform.csproj" />
 	</ItemGroup>
 	<ItemGroup>

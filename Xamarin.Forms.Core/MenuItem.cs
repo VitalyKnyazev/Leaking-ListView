@@ -1,12 +1,24 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Threading;
 using System.Windows.Input;
+using ClassLibrary1;
 
 namespace Xamarin.Forms
 {
 
 	public class MenuItem : BaseMenuItem, IMenuItemController
 	{
+		public MenuItem()
+		{
+			Interlocked.Increment(ref Leaks.MenuItemCount);
+		}
+
+		~MenuItem()
+		{
+			Interlocked.Decrement(ref Leaks.MenuItemCount);
+		}
+		
 		public static readonly BindableProperty AcceleratorProperty = BindableProperty.CreateAttached(nameof(Accelerator), typeof(Accelerator), typeof(MenuItem), null);
 
 		public static Accelerator GetAccelerator(BindableObject bindable) => (Accelerator)bindable.GetValue(AcceleratorProperty);

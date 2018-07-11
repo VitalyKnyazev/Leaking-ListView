@@ -1,4 +1,5 @@
 ﻿using System;
+using ClassLibrary1;
 
 namespace App2
 {
@@ -28,7 +29,8 @@ namespace App2
 
 		private void AccountsPage_OnAppearing(object sender, EventArgs e)
 		{
-			leakedMenuItemSubscriptionCountLabel.Text = "Leaked MenuItem subscription count: " + Leaks.MenuItemPropertyChangedSubscriptionCount;
+			leakedMenuItemSubscriptionCountLabel.Text = "Leaked MenuItem.PropertyChanged subscription count: " + Leaks.MenuItemPropertyChangedSubscriptionCount;
+			leakedMenuItemCountLabel.Text = "Leaked MenuItem count: " + Leaks.MenuItemCount;
 		}
 	}
 }

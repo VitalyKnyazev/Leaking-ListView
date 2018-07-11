@@ -43,9 +43,9 @@
     <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\App2\App2.csproj">
-      <Project>{BEE5B0E9-898B-46F0-9B2B-4CEF468E86AE}</Project>
-      <Name>App2</Name>
+    <ProjectReference Include="..\ClassLibrary1\ClassLibrary1.csproj">
+      <Project>{D2878A68-AA50-491A-9C01-189B1CDED510}</Project>
+      <Name>ClassLibrary1</Name>
     </ProjectReference>
     <ProjectReference Include="..\Xamarin.Forms.Core\Xamarin.Forms.Core.csproj">
       <Project>{792de91a-00f0-49a0-b111-927c560a1c9a}</Project>
